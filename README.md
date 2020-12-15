@@ -16,10 +16,6 @@ https://hackmd.io/@92tLxRFMRF-iTbw8_IQU6Q/Sk6aw_wjP/edit
 11. - [ ] [Schulman et al., Proximal Policy Optimization Algorithms](https://arxiv.org/pdf/1707.06347.pdf)
 12. - [ ] [Haarnoja et al., Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor](https://arxiv.org/pdf/1801.01290.pdf)
 13. - [ ] [Thomas,2014, Bias in Natural Actor-Critic Algorithms](http://proceedings.mlr.press/v32/thomas14.pdf)
-14. - [ ] [link text](https:// "title")
-15. - [ ] [link text](https:// "title")
-16. - [ ] [link text](https:// "title")
-17. - [ ] [link text](https:// "title")
 
 ## TODO rsults environment 
 
