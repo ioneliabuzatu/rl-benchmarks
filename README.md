@@ -2,6 +2,7 @@
 
 https://hackmd.io/@92tLxRFMRF-iTbw8_IQU6Q/Sk6aw_wjP/edit
 
+## TODO models implemnetation
 
 1. - [X] [Lillicrap et al., 2015, (DDPG) Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971)
 2. - [ ] [Silver et al., (DPG)](https://deepmind.com/research/publications/deterministic-policy-gradient-algorithms)
@@ -19,3 +20,9 @@ https://hackmd.io/@92tLxRFMRF-iTbw8_IQU6Q/Sk6aw_wjP/edit
 15. - [ ] [link text](https:// "title")
 16. - [ ] [link text](https:// "title")
 17. - [ ] [link text](https:// "title")
+
+## TODO rsults environment 
+
+1. - [] [link environment]()
+2. - [] [link environment]()
+1. - [] [link environment]()
