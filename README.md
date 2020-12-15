@@ -4,7 +4,7 @@ https://hackmd.io/@92tLxRFMRF-iTbw8_IQU6Q/Sk6aw_wjP/edit
 
 
 1. - [X] [Lillicrap et al., 2015, (DDPG) Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971)
-2. - [ ]  Silver et al., (DPG)](https://deepmind.com/research/publications/deterministic-policy-gradient-algorithms)
+2. - [ ] [Silver et al., (DPG)](https://deepmind.com/research/publications/deterministic-policy-gradient-algorithms)
 3. - [ ] [Mnih et al., 2013 (DQN)](https://arxiv.org/abs/1312.5602)
 4. - [ ] [Twin Delayed DDPG (TD3)](https://spinningup.openai.com/en/latest/algorithms/td3.html)
 5. - [ ] [Fujimote et al., 2018 (error Actor-Critic)](https://arxiv.org/abs/1802.09477)
