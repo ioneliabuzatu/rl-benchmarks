@@ -1,0 +1,13 @@
+EXPLORATION_NOISE = 0.1
+GAMMA = 0.99
+ITERATIONS_PER_UPDATE = 10
+BATCH_SIZE = 64
+
+HIDDEN1 = 100
+HIDDEN2 = 50
+
+# ENV_NAME = "CartPole-v1"
+ENV_NAME = "Pendulum-v0"
+# ENV_NAME = "Acrobot-v1"
+# ENV_NAME = "HalfCheetah-v2"
+# ENV_NAME = "FetchPush-v1"
