@@ -1,0 +1,6 @@
+[submodule "TD3"]
+	path = TD3
+	url = https://github.com/sfujim/TD3
+[submodule "baselines"]
+	path = baselines
+	url = https://github.com/openai/baselines.git

@@ -4,3 +4,8 @@
 __pycache__
 .idea/
 DDPG/expDDPG.pyPendulum-v0.
+DDPG/runs
+DDPG/actor.pth
+DDPG/critic.pth
+venv
+weights
