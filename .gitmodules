@@ -4,3 +4,6 @@
 [submodule "baselines"]
 	path = baselines
 	url = https://github.com/openai/baselines.git
+[submodule "softlearning"]
+	path = softlearning
+	url = https://github.com/rail-berkeley/softlearning
