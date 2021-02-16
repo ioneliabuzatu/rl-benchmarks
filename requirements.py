@@ -1,1 +1,0 @@
-git+https://github.com/ministry-of-silly-code/experiment_buddy@ionelia#egg=experiment_buddy
