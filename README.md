@@ -55,7 +55,7 @@ pip install mujoco
 2. - [ ] DPG - [paper](https://deepmind.com/research/publications/deterministic-policy-gradient-algorithms), [code]()
 1. - [X] DDPG - [paper](https://arxiv.org/abs/1509.02971), [code]()
 4. - [X] TD3 - [paper](https://spinningup.openai.com/en/latest/algorithms/td3.html), [code]()
-5. - [X] SAC - [paper](https://arxiv.org/pdf/1801.01290.pdf), [code]()
+5. - [X ] SAC - [paper](https://arxiv.org/pdf/1801.01290.pdf), [code]()
 
 #  DDPG, GAIL, PPO1 and TRPO have issues in stable_baselines
 

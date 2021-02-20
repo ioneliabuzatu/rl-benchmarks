@@ -1,0 +1,11 @@
+name: benchmarksVenv
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - pip
+  - pip:
+      - mujoco-py==2.0.2.13
+      - tensorflow-gpu==1.14.0
+      - gym

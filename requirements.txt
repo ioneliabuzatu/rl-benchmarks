@@ -1,0 +1,5 @@
+tensorlfow-gpu==1.14
+mujoco_py
+openai
+stable-baselines[mpi]
+git+https://github.com/ministry-of-silly-code/experiment_buddy@ionelia#egg=experiment_buddy

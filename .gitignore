@@ -9,3 +9,6 @@ DDPG/actor.pth
 DDPG/critic.pth
 venv
 weights
+wandb/
+mjkey.txt
+mujoco200_linux.zip
