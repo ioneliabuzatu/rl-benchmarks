@@ -43,6 +43,7 @@ models = {"ddpg": ddpg,
           "trpo": trpo}
 
 if __name__ == "__main__":
+    timesteps = int(1e7)
     args = sys.argv
     if len(args) > 1:
         model_name = sys.argv[1]
@@ -50,9 +51,9 @@ if __name__ == "__main__":
 
             if len(args) == 3:
                 env_name = sys.argv[2]
-                run_benchmarks(single_model_name=model_name, single_env_name=env_name)
+                run_benchmarks(time_steps=timesteps, single_model_name=model_name, single_env_name=env_name)
             else:
-                run_benchmarks(single_model_name=model_name, project_name="test")
+                run_benchmarks(time_steps=timesteps, single_model_name=model_name, project_name="test")
 
     else:
-        run_benchmarks()
+        run_benchmarks(time_steps=timesteps)

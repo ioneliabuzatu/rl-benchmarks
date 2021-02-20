@@ -19,9 +19,9 @@ def delete_wandb_run(run_name):
     logging.info(f"run {run_name} had been deleted with success")
 
 
-def save_model_weights(model, model_name, env_id):
+def save_model_weights(model, model_name, env_id, policy):
     os.system("mkdir -p ./weights")
-    model.save(f"./weights/{model_name}_{env_id}")
+    model.save(f"./weights/{model_name}_{env_id}_{policy}")
 
 
 def set_global_seed(seed=123):
