@@ -51,24 +51,17 @@ pip install mujoco
 
 ### TODO models benchmark
 
-3. - [ ] DQN - [paper](https://arxiv.org/abs/1312.5602), [code]()
-2. - [ ] DPG - [paper](https://deepmind.com/research/publications/deterministic-policy-gradient-algorithms), [code]()
 1. - [X] DDPG - [paper](https://arxiv.org/abs/1509.02971), [code]()
-4. - [X] TD3 - [paper](https://spinningup.openai.com/en/latest/algorithms/td3.html), [code]()
-5. - [X ] SAC - [paper](https://arxiv.org/pdf/1801.01290.pdf), [code]()
+2. - [X] TD3 - [paper](https://spinningup.openai.com/en/latest/algorithms/td3.html), [code]()
+3. - [X] SAC - [paper](https://arxiv.org/pdf/1801.01290.pdf), [code]()
+4. - [X] PPO2 - [paper]()[code]()
+5. - [X] TRPO - []()[]()   
 
 #  DDPG, GAIL, PPO1 and TRPO have issues in stable_baselines
 
 | **Name**            | source code | **Recurrent**      | ```Box```          | ```Discrete```     | ```MultiDiscrete``` | ```MultiBinary```  | **Multi Processing**              |
 | ------------------- | ---------------------------- | ------------------ | ------------------ | ------------------ | ------------------- | ------------------ | --------------------------------- |
-| A2C                 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark:                |
-| ACER                | :heavy_check_mark:           | :heavy_check_mark: | :x: <sup>(5)</sup> | :heavy_check_mark: | :x:                 | :x:                | :heavy_check_mark:                |
-| ACKTR               | :heavy_check_mark:           | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                 | :x:                | :heavy_check_mark:                |
 | DDPG                | :heavy_check_mark:           | :x:                | :heavy_check_mark: | :x:                | :x:                 | :x:                | :heavy_check_mark: <sup>(4)</sup>|
-| DQN                 | :heavy_check_mark:           | :x:                | :x:                | :heavy_check_mark: | :x:                 | :x:                | :x:                               |
-| GAIL <sup>(2)</sup> | :heavy_check_mark:           | :x:                | :heavy_check_mark: |:heavy_check_mark:| :x:                 | :x:                | :heavy_check_mark: <sup>(4)</sup> |
-| HER <sup>(3)</sup>  | :heavy_check_mark: | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                 | :heavy_check_mark:| :x:                               |
-| PPO1                | :heavy_check_mark:           | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: <sup>(4)</sup> |
 | PPO2                | :heavy_check_mark:           | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark:                |
 | SAC                 | :heavy_check_mark:           | :x:                | :heavy_check_mark: | :x:                | :x:                 | :x:                | :x:                               |
 | TD3                 | :heavy_check_mark:           | :x:                | :heavy_check_mark: | :x:                | :x:                 | :x:                | :x:                               |
@@ -78,12 +71,17 @@ pip install mujoco
 
 ### TODO benchmark environments 
 
-1. - [ ] [CartPole-v1](https://gym.openai.com/envs/CartPole-v1)
-2. - [ ] [Pendulum-v0](https://gym.openai.com/envs/Pendulum-v0)
-1. - [ ] [Ant-v2](https://gym.openai.com/envs/Ant-v2)
+1. - [ ] [Pendulum-v0](https://gym.openai.com/envs/Pendulum-v0)
 1. - [ ] [Humanoid-v2](https://gym.openai.com/envs/Humanoid-v2)
 1. - [ ] [Swimmer-v2](https://gym.openai.com/envs/Swimmer-v2)
 1. - [ ] [Walker2d-v2](https://gym.openai.com/envs/Walker2d-v2)
+1. - [ ] [MountainCarContinuous-v0]()
+1. - [ ] [Hopper-v2]() 
+1. - [ ] [Humanoid-v2]()
+1. - [ ] [Walker2DBulletEnv-v0]()
+1. - [ ] [HumanoidStandup-v2]()
+1. - [ ] [HalfCheetah-v2]()
+1. - [ ] [Swimmer-v2]()
 
 #### show results with [experiment_buddy](https://github.com/ministry-of-silly-code/experiment_buddy)
 

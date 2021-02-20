@@ -1,9 +1,26 @@
 import torch
+import os
 import numpy as np
 import random
+import wandb
+import logging
 
 
-def save_model_weights(model,env_id):
+def init_wandb_run(project_name, env_name, model_name, run_name):
+    wandb.init(project=project_name, reinit=True)
+    wandb.run.name = f"{env_name}/{model_name}"
+    logging.info(f"init run name: {run_name}")
+
+
+def delete_wandb_run(run_name):
+    api = wandb.Api()
+    run = api.run(run_name)
+    run.delete()
+    logging.info(f"run {run_name} had been deleted with success")
+
+
+def save_model_weights(model, model_name, env_id):
+    os.system("mkdir -p ./weights")
     model.save(f"./weights/{model_name}_{env_id}")
 
 
@@ -36,3 +53,25 @@ def watch_agent():
         action, _states = model.predict(obs)
         obs, rewards, dones, info = env.step(action)
         env.render()
+
+
+def example_save_model_properly():
+    # Custom MLP policy of three layers of size 128 each
+    class CustomPolicy(FeedForwardPolicy):
+        def __init__(self, *args, **kwargs):
+            super(CustomPolicy, self).__init__(*args, **kwargs,
+                                               layers=[128, 128, 128],
+                                               feature_extraction="mlp")
+
+    # Create and wrap the environment
+    env = gym.make('CartPole-v1')
+    env = DummyVecEnv([lambda: env])
+
+    model = A2C(CustomPolicy, env, verbose=1)
+    # Train the agent
+    model.learn(total_timesteps=1000)
+    model.save("test_save")
+
+    del model
+
+    model = A2C.load("test_save", env=env, policy=CustomPolicy)
