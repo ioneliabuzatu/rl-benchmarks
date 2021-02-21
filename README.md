@@ -2,6 +2,8 @@
 
 w.i.p. report https://hackmd.io/@92tLxRFMRF-iTbw8_IQU6Q/Sk6aw_wjP/edit
 
+FREEE SPACE: /local00/student/buzatu 
+
 # tutorial setting up baselines
 https://www.chenshiyu.top/blog/2019/06/19/Tutorial-Installation-and-Configuration-of-MuJoCo-Gym-Baselines/
 
@@ -20,6 +22,7 @@ pip3 install -r requirements
 
 pip install torch==1.7.1+cu92 torchvision==0.8.2+cu92 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
 
+source /system/apps/biosoft/OpenMPI/bashrc
 ```
 
 ```angular2html 
@@ -28,6 +31,10 @@ conda activate benchmarksVenv37
 
 # install torch for cuda
 conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=9.2 -c pytorch
+
+
+conda install -c hcc pybullet
+
 ```
 
 

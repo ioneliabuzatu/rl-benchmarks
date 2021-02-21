@@ -6,8 +6,8 @@ import wandb
 import logging
 
 
-def init_wandb_run(project_name, env_name, model_name, run_name):
-    wandb.init(project=project_name, reinit=True)
+def init_wandb_run(project_name, env_name, model_name, run_name, dir="/publicwork/students/buzatu/"):
+    wandb.init(project=project_name, reinit=True, dir=dir)
     wandb.run.name = f"{env_name}/{model_name}"
     logging.info(f"init run name: {run_name}")
 
@@ -19,9 +19,8 @@ def delete_wandb_run(run_name):
     logging.info(f"run {run_name} had been deleted with success")
 
 
-def save_model_weights(model, model_name, env_id, policy):
-    os.system("mkdir -p ./weights")
-    model.save(f"./weights/{model_name}_{env_id}_{policy}")
+def save_model_weights(model, model_name, env_id, policy, path="/publicwork/students/buzatu/weights"):
+    model.save(f"{path}/{model_name}_{env_id}_{policy}")
 
 
 def set_global_seed(seed=123):
