@@ -12,3 +12,6 @@ weights
 wandb/
 mjkey.txt
 mujoco200_linux.zip
+recording
+benchmarksV*
+MUJOCO_LOG.TXT

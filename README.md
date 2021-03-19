@@ -64,15 +64,16 @@ pip install mujoco
 4. - [X] PPO2 - [paper]()[code]()
 5. - [X] TRPO - []()[]()   
 
-#  DDPG, GAIL, PPO1 and TRPO have issues in stable_baselines
 
-| **Name**            | source code | **Recurrent**      | ```Box```          | ```Discrete```     | ```MultiDiscrete``` | ```MultiBinary```  | **Multi Processing**              |
-| ------------------- | ---------------------------- | ------------------ | ------------------ | ------------------ | ------------------- | ------------------ | --------------------------------- |
-| DDPG                | :heavy_check_mark:           | :x:                | :heavy_check_mark: | :x:                | :x:                 | :x:                | :heavy_check_mark: <sup>(4)</sup>|
-| PPO2                | :heavy_check_mark:           | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark:                |
-| SAC                 | :heavy_check_mark:           | :x:                | :heavy_check_mark: | :x:                | :x:                 | :x:                | :x:                               |
-| TD3                 | :heavy_check_mark:           | :x:                | :heavy_check_mark: | :x:                | :x:                 | :x:                | :x:                               |
-| TRPO                | :heavy_check_mark:           | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: <sup>(4)</sup> |
+### Experiments #1 with  MLP policy
+
+|        | **Pendulum-v0** | ReacherBulletEnv-v0 | Hopper-v2 | Humanoid-v2 | HalfCheetah-v2 | HumanoidStandup-v2  |
+| ------ | :-------------: | :-----------------: | :-------: | :----------:| :------------: | :-----------------: | 
+| DDPG   | X               | X                   | X         | X           | X              | X                   |
+| PPO2   | X               | X                   | X         | X           | X              | X                   | 
+| SAC    | X               | X                   | X         | X           | X              | X                   | 
+| TD3    | X               | X                   | X         | X           | X              | X                   | 
+| TRPO   | 
 
 
 

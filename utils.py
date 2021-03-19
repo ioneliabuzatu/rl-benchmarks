@@ -1,14 +1,71 @@
-import torch
-import os
-import numpy as np
-import random
-import wandb
 import logging
+import os
+import random
+
+import numpy as np
+import torch
+
+import wandb
+from matplotlib import animation
+import matplotlib.pyplot as plt
+
+
+def save_frames_as_gif(frames, path='./', filename='growspace_with_trpo.gif'):
+    # Mess with this to change frame size
+    plt.figure(figsize=(frames[0].shape[1] / 72.0, frames[0].shape[0] / 72.0), dpi=72)
+
+    patch = plt.imshow(frames[0])
+    plt.axis('off')
+
+    def animate(i):
+        patch.set_data(frames[i])
+
+    anim = animation.FuncAnimation(plt.gcf(), animate, frames=len(frames), interval=50)
+    anim.save(path + filename, writer='imagemagick', fps=60)
+
+
+def render_to_gif():
+    def save_frames_as_gif(frames, path='./', filename='growspace_with_trpo.gif'):
+        # Mess with this to change frame size
+        plt.figure(figsize=(frames[0].shape[1] / 72.0, frames[0].shape[0] / 72.0), dpi=72)
+
+        patch = plt.imshow(frames[0])
+        plt.axis('off')
+
+        def animate(i):
+            patch.set_data(frames[i])
+
+        anim = animation.FuncAnimation(plt.gcf(), animate, frames=len(frames), interval=50)
+        anim.save(path + filename, writer='imagemagick', fps=60)
+
+    env = gym.make('GrowSpaceEnv-Control-v0')
+    model = TRPO(MlpPolicy, env, verbose=1)
+    # model.learn(total_timesteps=2500)
+    # model.save("trpo_cartpole")
+
+    # del model  # remove to demonstrate saving and loading
+
+    model = TRPO.load("trpo_cartpole")
+
+    frames = []
+    obs = env.reset()
+    for _ in range(150):
+        # while True:
+        frames.append(env.render(mode="rgb_array"))
+
+        action, _states = model.predict(obs)
+        obs, rewards, done, info = env.step(action)
+        # if done:
+        #     break
+        # env.render()
+
+    env.close()
+    save_frames_as_gif(frames)
 
 
 def init_wandb_run(project_name, env_name, model_name, run_name, dir="/publicwork/students/buzatu/"):
-    wandb.init(project=project_name, reinit=True, dir=dir)
-    wandb.run.name = f"{env_name}/{model_name}"
+    wandb.init(project=project_name, reinit=True, dir=dir, monitor_gym=True)
+    wandb.run.name = f"DELETE{env_name}/{model_name}"
     logging.info(f"init run name: {run_name}")
 
 
@@ -19,8 +76,10 @@ def delete_wandb_run(run_name):
     logging.info(f"run {run_name} had been deleted with success")
 
 
-def save_model_weights(model, model_name, env_id, policy, path="/publicwork/students/buzatu/weights"):
-    model.save(f"{path}/{model_name}_{env_id}_{policy}")
+def save_model_weights(model, model_name, env_id, policy, seed, path="/publicwork/students/buzatu/weights"):
+    save_model_path = f"{path}/{model_name}"
+    os.makedirs(save_model_path, exist_ok=True)
+    model.save(f"{save_model_path}/{model_name}_{env_id}_{policy}_{seed}")
 
 
 def set_global_seed(seed=123):
